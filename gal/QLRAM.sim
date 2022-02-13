@@ -1,0 +1,52 @@
+%SIGNAL
+PIN   3 =  A16 
+PIN   2 =  A17 
+PIN  11 =  A18 
+PIN   9 =  A19 
+PIN   6 =  ASL 
+PIN   1 =  DSL 
+PIN  16 =  DSMCL 
+PIN  14 =  DTACK 
+PIN  17 =  RAMADDR 
+PIN  19 =  RAM_CE 
+PIN  18 =  RAM_OE 
+%END
+
+%FIELD
+%END
+
+%EQUATION
+DSMCL =>
+    1 
+
+DSMCL.oe  =>
+    !ASL & RAMADDR
+
+DTACK =>
+    0 
+
+DTACK.oe  =>
+    !DSL & RAMADDR
+
+RAMADDR =>
+    !A17 & A18 & A19
+
+RAM_CE =>
+    !RAMADDR
+  # ASL
+
+RAM_OE =>
+    !RAMADDR
+  # ASL
+  # DSL
+
+RAMADDR.oe  =>
+    1 
+
+RAM_CE.oe  =>
+    1 
+
+RAM_OE.oe  =>
+    1 
+
+%END
