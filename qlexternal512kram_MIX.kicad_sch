@@ -3691,7 +3691,7 @@
     (in_bom yes) (on_board yes)
     (uuid 2307b488-4a2e-490d-9ec0-0a3dca2c731a)
     (property "Reference" "U1" (id 0) (at 177.165 34.925 0))
-    (property "Value" "AS6C4008-55PCN" (id 1) (at 172.085 37.465 0))
+    (property "Value" "HM628512BLFP-7" (id 1) (at 172.085 37.465 0))
     (property "Footprint" "Package_SO:SSOP-32_11.305x20.495mm_P1.27mm" (id 2) (at 182.88 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -3952,7 +3952,7 @@
     (in_bom yes) (on_board yes)
     (uuid 723d583a-7dea-4936-8d46-6a87035bc142)
     (property "Reference" "U2" (id 0) (at 241.3 106.68 0))
-    (property "Value" "GAL16V8" (id 1) (at 241.3 109.22 0))
+    (property "Value" "GAL16V8B-25QP" (id 1) (at 238.76 109.22 0))
     (property "Footprint" "Package_DIP:DIP-20_W7.62mm_LongPads" (id 2) (at 248.92 125.73 0)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -4404,10 +4404,10 @@
       (reference "R2") (unit 1) (value "10K") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/2307b488-4a2e-490d-9ec0-0a3dca2c731a"
-      (reference "U1") (unit 1) (value "AS6C4008-55PCN") (footprint "Package_SO:SSOP-32_11.305x20.495mm_P1.27mm")
+      (reference "U1") (unit 1) (value "HM628512BLFP-7") (footprint "Package_SO:SSOP-32_11.305x20.495mm_P1.27mm")
     )
     (path "/723d583a-7dea-4936-8d46-6a87035bc142"
-      (reference "U2") (unit 1) (value "GAL16V8") (footprint "Package_DIP:DIP-20_W7.62mm_LongPads")
+      (reference "U2") (unit 1) (value "GAL16V8B-25QP") (footprint "Package_DIP:DIP-20_W7.62mm_LongPads")
     )
     (path "/5ac2c658-ce29-46fb-894d-f99c774c93d1"
       (reference "U3") (unit 1) (value "LM1117-5.0") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")

@@ -6,7 +6,7 @@ License under: CERN Open Hardware Licence Version 2 - Strongly Reciprocal
 
 https://ohwr.org/cern_ohl_s_v2.txt
 
-This is based on the work of McLeod Ideafix, Jose Leandro and tcat between others. 
+This is based on the work of McLeod Ideafix, Jose Leandro, Zerover and tcat between others. 
 
 This board will provide aditional 512Kb of static RAM (fast-ram) to the sinclair QL.
 
