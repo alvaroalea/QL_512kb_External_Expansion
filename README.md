@@ -10,7 +10,7 @@ This is based on the work of McLeod Ideafix, Jose Leandro, Zerover and tcat betw
 
 This board will provide aditional 512Kb of static RAM (fast-ram) to the sinclair QL.
 
-It is incompatible con any aditional expansion on the QL.
+It is incompatible with any aditional memory expansion on the QL.
 
 Provide a expansion conector to allow conect aditional interfaces.
 
