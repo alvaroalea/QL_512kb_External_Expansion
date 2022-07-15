@@ -8,13 +8,23 @@ https://ohwr.org/cern_ohl_s_v2.txt
 
 This is based on the work of McLeod Ideafix, Jose Leandro, Zerover and tcat between others. 
 
-This board will provide aditional 512Kb of static RAM (fast-ram) to the sinclair QL.
+This board will provide aditional 512kB of static RAM (fast-ram) to the sinclair QL.
 
 It is incompatible with any aditional memory expansion on the QL.
 
 Provide a expansion conector to allow conect aditional interfaces.
 
-It's also posible to configure as aditional 256Kb, and use two of this card for a maximun of 899Kb, this is incompatible with a lot of expansion card, so use with caution, there area aditional 192Kb and 128Kb configuration, but is not working yet. 
+There area available 4 configuration trough solder jumpers in the PCB.
+*512kB - This is the standar 512kB expansion for any QL
+*256kB - This is for use as a second expansion, use the full QL space for a maximun of 898kB, be aware that this is incompatible with a lot of expansion card, so use with caution (Any expansion card that do not use jumper for configuration will be incompatible).
+*192kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
+*128kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
+
+Be aware that as download from repository, the 128Kb really provide 64kB only, because is a safe option.
+For be able to use 128kB, for a total of 768kB, is mandatory to have an aditional expansion card that put ROM in address E00000h, in other case the QL ROM will hang indicating RAM malfunction, because a weired overlap of the internal 128kB with this external 128kB.
+
+If for some reason 256 or 192kB is not valid and you need 128kB, you can recompile with winculp the gal code to get 128kB.
+
 
 https://www.instagram.com/p/CZWfWcUM5mx/
 
