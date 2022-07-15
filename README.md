@@ -15,10 +15,10 @@ It is incompatible with any aditional memory expansion on the QL.
 Provide a expansion conector to allow conect aditional interfaces.
 
 There area available 4 configuration trough solder jumpers in the PCB.
-*512kB - This is the standar 512kB expansion for any QL
-*256kB - This is for use as a second expansion, use the full QL space for a maximun of 898kB, be aware that this is incompatible with a lot of expansion card, so use with caution (Any expansion card that do not use jumper for configuration will be incompatible).
-*192kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
-*128kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
+* 512kB - This is the standar 512kB expansion for any QL
+* 256kB - This is for use as a second expansion, use the full QL space for a maximun of 898kB, be aware that this is incompatible with a lot of expansion card, so use with caution (Any expansion card that do not use jumper for configuration will be incompatible).
+* 192kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
+* 128kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
 
 Be aware that as download from repository, the 128Kb really provide 64kB only, because is a safe option.
 For be able to use 128kB, for a total of 768kB, is mandatory to have an aditional expansion card that put ROM in address E00000h, in other case the QL ROM will hang indicating RAM malfunction, because a weired overlap of the internal 128kB with this external 128kB.
