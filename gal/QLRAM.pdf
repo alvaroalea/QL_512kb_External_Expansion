@@ -1,11 +1,11 @@
-{COMPONENT C:\DOCUMENTS AND SETTINGS\COVA\ESCRITORIO\QLRAM\QLRAM.SYM
+{COMPONENT Z:\HOME\ALVARO\KICADPROJECTS\GITHUB\QL_512KB_EXTERNAL_EXPANSION\GAL\QLRAM.SYM
 
  {ENVIRONMENT
   {PDIFvrev 3.00}
   {Program "CUPL(WM) Version 5.0a"}
   {DBtype "Schematic"}
   {DBvrev 1.01}
-  {DBtime "Sun Jan 30 11:09:41 2022 "}
+  {DBtime "Thu Jul 21 23:12:20 2022 "}
   {DBunit "MIL"}
   {DBgrid 10}
   {Lyrstr "WIRES" 1 "BUS" 1 "GATE" 2 "IEEE" 2 "PINFUN" 3 "PINNUM" 1 
@@ -33,10 +33,12 @@
  {SYMBOL
   {PIN_DEF
    [Ly "PINCON"]
-   {P DSL {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
-   {P A17 {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
-   {P A16 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
-   {P ASL {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
+   {P DSL {Pt "INPUT"}{Lq 0}{Ploc 100 160}}
+   {P A17 {Pt "INPUT"}{Lq 0}{Ploc 100 140}}
+   {P A16 {Pt "INPUT"}{Lq 0}{Ploc 100 120}}
+   {P ASL {Pt "INPUT"}{Lq 0}{Ploc 100 100}}
+   {P MS1 {Pt "INPUT"}{Lq 0}{Ploc 100 80}}
+   {P MS2 {Pt "INPUT"}{Lq 0}{Ploc 100 60}}
    {P A19 {Pt "INPUT"}{Lq 0}{Ploc 100 40}}
    {P A18 {Pt "INPUT"}{Lq 0}{Ploc 100 20}}
    {P DTACK {Pt "I/O"}{Lq 0}{Ploc 300 20}}
@@ -49,10 +51,12 @@
   {PKG
    [Ly "REFDES"]
    [Ts 25][Tj "CB"][Tr 0][Tm "N"]
-   {Rdl 200 150}
+   {Rdl 200 190}
 
    [Ly "PINNUM"]
    [Ts 15][Tj "RC"]
+   {Pnl 120 170}
+   {Pnl 120 150}
    {Pnl 120 130}
    {Pnl 120 110}
    {Pnl 120 90}
@@ -66,13 +70,15 @@
    {Pnl 280 90}
    {Pnl 280 110}
 
-   {Sd A 1 2 3 6 9 11 14 16 17 18 19}
+   {Sd A 1 2 3 6 7 8 9 11 14 16 17 18 19}
   }
 
   {PIC
    [Ly "GATE"]
    [Ts 15][Tj "LC"][Tr 0][Tm "N"]
-   {R 130 140 270 0}
+   {R 130 180 270 0}
+   {L 130 160 100 160}
+   {L 130 140 100 140}
    {L 130 120 100 120}
    {L 130 100 100 100}
    {L 130 80 100 80}
@@ -86,10 +92,12 @@
    {L 270 100 300 100}
    [Ly "PINNAM"]
    [Tj "LC"]
-   {T "DSL" 140 120}
-   {T "A17" 140 100}
-   {T "A16" 140 80}
-   {T "ASL" 140 60}
+   {T "DSL" 140 160}
+   {T "A17" 140 140}
+   {T "A16" 140 120}
+   {T "ASL" 140 100}
+   {T "MS1" 140 80}
+   {T "MS2" 140 60}
    {T "A19" 140 40}
    {T "A18" 140 20}
    [Tj "RC"]
@@ -111,7 +119,7 @@
    {EX
     [Ly "ATTR2"]
     [Ts 12][Tj "CT"][Tr 0][Tm "N"]
-    {At PLD C:\DOCUMENTS AND SETTINGS\COVA\ESCRITORIO\QLRAM\QLRAM 200 140}
+    {At PLD Z:\HOME\ALVARO\KICADPROJECTS\GITHUB\QL_512KB_EXTERNAL_EXPANSION\GAL\QLRAM 200 180}
    }
   }
  }
@@ -128,6 +136,10 @@
    {N A16
    }
    {N ASL
+   }
+   {N MS1
+   }
+   {N MS2
    }
    {N A19
    }

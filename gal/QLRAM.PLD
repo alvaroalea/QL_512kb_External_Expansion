@@ -29,11 +29,7 @@ PIN 19 = RAM_CE ;
 RAMADDR = ( MS1 & MS2 ) & ((A19 & !A18) # (!A19 & A18))#
           ( MS1 & !MS2) & (A19 & A18)#
           (!MS1 & MS2 ) & (A19 & A18 & !(A17 & A16))#
-          (!MS1 & !MS2) & (A19 & A18 & !A16); // con esto 64Kb
-//          (!MS1 & !MS2) & (A19 & A18 & !A17);
-
-
-
+          (!MS1 & !MS2) & (A19 & A18 & !A17);
 
 /* Standar 512Kb RAM */
 //RAMADDR = (A19 & !A18) # (!A19 & A18); 
@@ -44,11 +40,11 @@ RAMADDR = ( MS1 & MS2 ) & ((A19 & !A18) # (!A19 & A18))#
 /* Top 192Kb Ram for a maximun 832Kb of RAM and 64Kb for aditional roms */
 //RAMADDR = A19 & A18 & !(A17 & A16); 
 
-/* NO FUNCIONA Top 128Kb Ram for a maximun 768Kb of RAM and 128Kb for aditional roms */
+/* Top 128Kb Ram for a maximun 768Kb of RAM and 128Kb for aditional roms */
 //RAMADDR = A19 & A18 & !A17 ; 
 
-/* SIN SENTIDO Top 64Kb Ram for a maximun 704Kb of RAM and 192Kb for aditional roms */
-//RAMADDR =A19 & A18 & !A16; 
+/* Top 64Kb Ram for a maximun 704Kb of RAM and 192Kb for aditional roms */
+//RAMADDR =A19 & A18 & !A17 & !A16; 
 
 /* RAM_CE = !RAMADDR;  sin as */ 
 /* RAM_OE = !RAMADDR # DSL; sin as */

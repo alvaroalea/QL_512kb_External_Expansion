@@ -7,6 +7,8 @@ PIN   6 =  ASL
 PIN   1 =  DSL 
 PIN  16 =  DSMCL 
 PIN  14 =  DTACK 
+PIN   7 =  MS1 
+PIN   8 =  MS2 
 PIN  17 =  RAMADDR 
 PIN  19 =  RAM_CE 
 PIN  18 =  RAM_OE 
@@ -29,7 +31,11 @@ DTACK.oe  =>
     !DSL & RAMADDR
 
 RAMADDR =>
-    !A17 & A18 & A19
+    A18 & !A19 & MS1 & MS2
+  # !A18 & A19 & MS1 & MS2
+  # A18 & A19 & MS1 & !MS2
+  # !A17 & A18 & A19 & !MS1
+  # !A16 & A18 & A19 & !MS1 & MS2
 
 RAM_CE =>
     !RAMADDR

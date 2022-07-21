@@ -5,7 +5,7 @@
 
 CUPL(WM)        5.0a Serial# 60008009
 Device          g16v8ma  Library DLIB-h-40-8
-Created         Sun Jan 30 11:09:41 2022
+Created         Thu Jul 21 23:12:20 2022
 Name            RAM512EXT 
 Partno          00 
 Revision        01 
@@ -32,7 +32,11 @@ DTACK.oe  =>
     !DSL & RAMADDR
 
 RAMADDR =>
-    !A17 & A18 & A19
+    A18 & !A19 & MS1 & MS2
+  # !A18 & A19 & MS1 & MS2
+  # A18 & A19 & MS1 & !MS2
+  # !A17 & A18 & A19 & !MS1
+  # !A16 & A18 & A19 & !MS1 & MS2
 
 RAM_CE =>
     !RAMADDR
@@ -71,7 +75,9 @@ Pol   Name              Ext     Pin     Type     Used   Pterms  Level
     DSMCL               oe      16       X        1       1       1     
     DTACK                       14       V        1       7       1     
     DTACK               oe      14       X        1       1       1     
-    RAMADDR                     17       V        1       7       1     
+    MS1                         7        V        -       -       -     
+    MS2                         8        V        -       -       -     
+    RAMADDR                     17       V        5       7       1     
     RAM_CE                      19       V        2       7       1     
     RAM_OE                      18       V        3       7       1     
     RAMADDR             oe      17       D        1       1       0     
@@ -111,11 +117,11 @@ Pin #18  02049  Pol -  02121  Ac1 -
  00480 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 Pin #17  02050  Pol -  02122  Ac1 - 
  00512 -------------------------------- 
- 00544 -x--------------------------x-x- 
- 00576 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
- 00608 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
- 00640 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
- 00672 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
+ 00544 --------------------x---x----xx- 
+ 00576 --------------------x---x---x--x 
+ 00608 --------------------x----x--x-x- 
+ 00640 -x-------------------x------x-x- 
+ 00672 -----x---------------x--x---x-x- 
  00704 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
  00736 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
 Pin #16  02051  Pol -  02123  Ac1 - 
@@ -180,8 +186,8 @@ LEGEND    X : fuse not blown
                           x---|4           17|---x RAMADDR                  
                           x---|5           16|---x DSMCL                    
                       ASL x---|6           15|---x                          
-                          x---|7           14|---x DTACK                    
-                          x---|8           13|---x                          
+                      MS1 x---|7           14|---x DTACK                    
+                      MS2 x---|8           13|---x                          
                       A19 x---|9           12|---x                          
                       GND x---|10          11|---x A18                      
                               |______________|

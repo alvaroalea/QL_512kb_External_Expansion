@@ -1,4 +1,4 @@
-# SINCLAIR QL 512Kb External Rom Expansion
+# SINCLAIR QL 512kB External Rom Expansion
 
 (C) 2022 Alvaro Alea Fernandez
 
@@ -20,11 +20,8 @@ There area available 4 configuration trough solder jumpers in the PCB.
 * 192kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
 * 128kB - Similar to 256kB provide aditional space for expansion cards correctly configured.
 
-Be aware that as download from repository, the 128Kb really provide 64kB only, because is a safe option.
+Be aware that the configuration of 128Kb can not be installed alone.
 For be able to use 128kB, for a total of 768kB, is mandatory to have an aditional expansion card that put ROM in address E00000h, in other case the QL ROM will hang indicating RAM malfunction, because a weired overlap of the internal 128kB with this external 128kB.
-
-If for some reason 256 or 192kB is not valid and you need 128kB, you can recompile with winculp the gal code to get 128kB.
-
 
 https://www.instagram.com/p/CZWfWcUM5mx/
 
