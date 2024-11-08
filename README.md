@@ -8,9 +8,11 @@ https://ohwr.org/cern_ohl_s_v2.txt
 
 This is based on the work of McLeod Ideafix, Jose Leandro, Zerover and tcat between others. 
 
-This board will provide aditional 512kB of static RAM (fast-ram) to the sinclair QL.
+This board will provide up to 512kB aditional of static RAM (fast-ram) to the sinclair QL.
 
-It is incompatible with any aditional memory expansion on the QL.
+Two board can be stacked to got a maximun of 898Kb of Memory. (same as Miracle's Trump Card)
+
+Be aware you can not have 2 memory expansion in same area (Jose Leandro's QBide, Trump Card, etc...)
 
 Provide a expansion conector to allow conect aditional interfaces.
 
@@ -25,7 +27,16 @@ For be able to use 128kB, for a total of 768kB, is mandatory to have an aditiona
 
 https://www.instagram.com/p/CZWfWcUM5mx/
 
-In the GAL folder there is the source code for winculp 
+In the GAL folder there is the source code to be compiled with GALasm that you can found here: https://github.com/daveho/GALasm
+
+## Mini Trump Card Compatibility
+
+I have done a version of the trump card disk interface here: https://github.com/alvaroalea/QL_MiniTrump3 , this interface do not
+provide memory like the original one. You can combine two of this card and the minitrump to got the same of the original trump card.
+
+You should conect the 512Kb Card to the QL, the MiniTrump Card to the 512Kb, and the +256Kb card to the Mini Trump, and in this board
+yo need to change the solder jumper (JP1) to 2-3 to allow the Minitrump card to coordinate with the second memory card.
+
 
 ![My image](qlexternal512kram_MIX.png) 
 

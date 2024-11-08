@@ -1,0 +1,60 @@
+GAL16V8
+Ram512ext
+; 1  2   3  4  5    6  7   8   9  10
+/DS A17 A16 A15 NC /AS JP1 JP2 A19 GND
+A18 NC RA2 DTACK RA DSMC  TC2 /RAMOE /RAMCE VCC
+;11 12 13  14    15  16   17  18     19    20
+
+;JP1 JP2 (jumper ON = 0)
+;OFF OFF - 512Kb, Standar 512Kb RAM
+;OFF  ON - +256Kb, Top 256Kb Ram for a maximun 898Kb of RAM
+; ON OFF - +192Kb, Top 192Kb Ram for a maximun 832Kb of RAM and 64Kb for aditional roms
+; ON  ON - +128Kb <-see notes of compatibility, Top 128Kb Ram for a maximun 768Kb of RAM and 128Kb for aditional roms
+;
+; -------- +64Kb, Top 64Kb Ram for a maximun 704Kb of RAM and 192Kb for aditional roms
+; TC2 is the PIN13 of the GAL1 of the TRUMP CARD DISC INTERFACE, and when active low inhibit the first 32Kb of last 256Kb block of memory (to allow ROM of trump to be mapped on 0xC0000)
+; Having total 768Kb (128K Internal + 512Kb + 128Kb) only work if just after exist a ROM (like a qubide) because QL ROM mismatch the first and last 128Kb and give a error.
+; for example: mICE cartridge + Trump Card with 512Kb + 128Kb + Qbide
+
+
+; OLMC in 16V8 has only 8 terms, and I need 11, so I use RA2 to complete RA
+
+
+RA2 = JP1 * JP2 * /A19 * A18 +                    ; 512Kb, 2 lineas, primer caso
+      JP1 * JP2 * A19 * /A18 +
+     /JP1 * TC2 * A19 *  A18 * /A17 * /A16 * /A15  + ;32K  2 lineas, tres ultimos casos
+     /JP2 * TC2 * A19 *  A18 * /A17 * /A16 * /A15  +
+     /JP1 *       A19 *  A18 * /A17 * /A16 * A15  +  ;32K  2 lineas, tres ultimos casos
+     /JP2 *       A19 *  A18 * /A17 * /A16 * A15
+
+RA = /JP1 *        A19 * A18 * /A17 *  A16  +      ;64K 2 lineas, tres ultimos casos, total 128K
+     /JP2 *        A19 * A18 * /A17 *  A16  +
+     /JP1 *  JP2 * A19 * A18 *  A17 * /A16  +      ;64K 2 lineas, 2 casos del medio, total 192K
+      JP1 * /JP2 * A19 * A18 *  A17 * /A16  +
+
+      JP1 */JP2 * A19 * A18 *  A17 *  A16   +      ;64K x lineas, segundo caso, restantes 64K, total 256K
+      RA2
+
+;  old ecuations, without TC2, more simple.
+;     JP1 * /JP2 * TC2 *  A19 * A18 +
+
+;    /JP1 * JP2 * TC2 * A19 * A18 * /A17 +
+;    /JP1 * JP2 * TC2 * A19 * A18 *  A17 * /A16 +
+
+;   /JP1 *  /JP2 * TC2 * A19 * A18 * /A17
+
+; (64Kb not used)
+;  +  JP1 *  JP2 * TC2 * A19 * A18 * /A17 * /A16
+
+RAMCE = RA * AS
+
+RAMOE = RA * AS * DS
+
+DSMC.T = VCC ;
+DSMC.E = RA * AS
+
+DTACK.T = GND ;
+DTACK.E = RA * DS
+
+DESCRIPTION:
+Extra RAM for Sinclair QL
