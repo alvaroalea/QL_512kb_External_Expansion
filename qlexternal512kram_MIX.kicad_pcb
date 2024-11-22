@@ -1948,7 +1948,7 @@
 				)
 			)
 		)
-		(property "Value" "QL_SLOT_DIN41612_CARD"
+		(property "Value" "QL_SLOT_DIN41612_FEMALE-90degrees"
 			(at -39.37 -7.62 0)
 			(layer "F.Fab")
 			(uuid "c6cb963e-f9e2-4407-b049-9f93d97603e3")
@@ -3681,7 +3681,7 @@
 				)
 			)
 		)
-		(property "Value" "QL_SLOT_DIN41612_CARD"
+		(property "Value" "QL_SLOT_DIN41612_MALE_90degrees"
 			(at 39.37 5.08 0)
 			(layer "F.Fab")
 			(uuid "d71157ec-ee87-4509-992e-6f38da8f9c32")
@@ -7171,7 +7171,7 @@
 			(xy 190.595 52.705) (xy 92.805 52.705)
 		)
 		(height 3.175)
-		(gr_text "3,8500 in"
+		(gr_text "97,7900 mm"
 			(at 141.6205 48.895 0)
 			(layer "Dwgs.User")
 			(uuid "27366328-279d-42e0-b564-ac47c75bd147")
@@ -7204,7 +7204,7 @@
 			(xy 190.595 52.705) (xy 190.595 88.265)
 		)
 		(height -5.08)
-		(gr_text "1,4000 in"
+		(gr_text "35,5600 mm"
 			(at 195.04 70.485 90)
 			(layer "Dwgs.User")
 			(uuid "6a57253d-b2bc-491f-adaa-2eec2db9818e")

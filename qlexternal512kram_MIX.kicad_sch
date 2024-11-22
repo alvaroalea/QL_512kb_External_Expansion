@@ -6,7 +6,7 @@
 	(paper "A4")
 	(title_block
 		(title "External Expansion 512Kb memory for Sinclair QL")
-		(date "2024-11-08")
+		(date "2024-11-22")
 		(rev "3")
 		(company "(C) 2022 Alvaro Alea Fdz")
 		(comment 1 "https://ohwr.org/cern_ohl_s_v2.txt")
@@ -8470,7 +8470,7 @@
 		)
 		(uuid "ff4d4161-6ba2-4cea-95f7-ebd38a942f19")
 	)
-	(text "NOTE JP3:\n1-2 Normal Position \n3-4 For use as +256Kb with my Trump Card\n\nInstall the +256K after the Trump Card \n"
+	(text "NOTE JP3:\n1-2 Normal Position \n2-3 For use as +256Kb with my Trump Card\n\nInstall the +256K after the Trump Card \n"
 		(exclude_from_sim no)
 		(at 118.11 136.144 0)
 		(effects
@@ -8481,7 +8481,7 @@
 		)
 		(uuid "09fbe426-a9ef-45a0-a709-91bed78dd9c1")
 	)
-	(text "EXPANSION SIDE"
+	(text "EXPANSION SIDE (M)"
 		(exclude_from_sim no)
 		(at 119.38 27.432 0)
 		(effects
@@ -8502,7 +8502,7 @@
 		)
 		(uuid "976fb8ae-d91c-4c2e-8249-5d057396a975")
 	)
-	(text "QL SIDE"
+	(text "QL SIDE (F)"
 		(exclude_from_sim no)
 		(at 48.26 27.432 0)
 		(effects
@@ -11207,7 +11207,7 @@
 				)
 			)
 		)
-		(property "Value" "QL_SLOT_DIN41612_CARD"
+		(property "Value" "QL_SLOT_DIN41612_MALE_90degrees"
 			(at 119.38 33.02 0)
 			(effects
 				(font
@@ -12657,7 +12657,7 @@
 				)
 			)
 		)
-		(property "Value" "QL_SLOT_DIN41612_CARD"
+		(property "Value" "QL_SLOT_DIN41612_FEMALE-90degrees"
 			(at 48.26 33.02 0)
 			(effects
 				(font
